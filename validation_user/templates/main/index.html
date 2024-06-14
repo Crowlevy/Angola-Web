@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angola Hub</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/menuCss/style-menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mainCss/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <nav class="side-menu">
+        <div id="btn-exp">
+            <div class="btn-activate" onclick="activateMenu(this)">
+                <!--<i class="bi bi-list" id="btn-exp"></i>-->
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+
+        <ul>
+            <li class="item-menu activate">
+                <a href="{% url 'Angola_Hub' %}">
+                    <span class="icon"><i class="bi bi-house-door"></i></span>
+                    <span class="txt-link">INICIAL</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-controller"></i></span>
+                    <span class="txt-link">JOGO INCRÍVEL</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-incognito"></i></span>
+                    <span class="txt-link">ULTRA SECRETO</span>
+                </a>
+            </li>
+            
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-images"></i></span>
+                    <span class="txt-link">FOTOS SALVAS</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="{% url 'register' %}">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                    <span class="txt-link">CONTA</span>
+                </a>
+            </li>
+            
+        </ul>
+
+    </nav>
+    <header>
+        <div class="logo">
+            <a href="{% url 'Angola_Hub' %}">
+                Angola <span class="highlight">Hub</span></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar">
+            <button>Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero2">
+                <h1>BEM VINDO AO PIOR SITE DA ANGOLA, SINTA-SE A VONTADE PARA APRECIAR O QUE HÁ DE MELHOR</h1>
+                <p>Ativo desde 1945 </p>
+                <div class="button-container">
+                    <button id="watchNow" class="watch-now-button">Assista Agora</button>
+                </div>
+            </div>
+
+            <img src="{% static 'src/img/image.jpg' %}" alt="IMG PRINCIPAL" class="hero-image">
+
+        </section>
+
+        <section id="works" class="hidden">
+            <h2>Angolanos em alta</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="{% static 'src/img/angolano1.jpg' %}" alt="ANGOLANO TRABALHADOR">
+                    <div class="card-content">
+                        <p>ANGOLANO NO TRABALHO</p>
+                        <div class="card-buttons">
+                            <button onclick="showFullImage('./src/img/angolano1.jpg')">Visualizar imagem
+                                inteira</button>
+                            <button onclick="addToWatchLater('./src/img/angolano1.jpg')">Adicionar para ver mais tarde</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'src/img/angolano2.jpg' %}" alt="ANGOLANO TRABALHADOR">
+                    <div class="card-content">
+                        <p>ANGOLANO JOGANDO NA VIDA REAL</p>
+                        <div class="card-buttons">
+                            <button onclick="showFullImage('./src/img/angolano2.jpg')">Visualizar imagem
+                                inteira</button>
+                            <button>Adicionar para ver mais tarde</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'src/img/angolano3.jpg' %}" alt="ANGOLANO TRABALHADOR">
+                    <div class="card-content">
+                        <p>ANGOLANO CONFUSO</p>
+                        <div class="card-buttons">
+                            <button onclick="showFullImage('./src/img/angolano3.jpg')">Visualizar imagem
+                                inteira</button>
+                            <button>Adicionar para ver mais tarde</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'src/img/angolano4.jpg' %}" alt="ANGOLANO TRABALHADOR">
+                    <div class="card-content">
+                        <p>ANGOLANO NO DRIP 🥶🥶🥶</p>
+                        <div class="card-buttons">
+                            <button onclick="showFullImage('./src/img/angolano4.jpg')">Visualizar imagem
+                                inteira</button>
+                            <button onclick="addToWatchLater('./src/img/angolano4.jpg')">Adicionar para ver mais tarde</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'src/img/angolano5.jpg' %}" alt="ANGOLANO TRABALHADOR">
+                    <div class="card-content">
+                        <p>ANGOLANO ESPADACHIM</p>
+                        <div class="card-buttons">
+                            <button onclick="showFullImage('./src/img/angolano5.jpg')">Visualizar imagem
+                                inteira</button>
+                            <button>Adicionar para ver mais tarde</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'src/img/angolano6.jpg' %}" alt="ANGOLANO TRABALHADOR">
+                    <div class="card-content">
+                        <p>ANGOLANO BATISTA MAROMBA</p>
+                        <div class="card-buttons">
+                            <button onclick="showFullImage('./src/img/angolano6.jpg')">Visualizar imagem
+                                inteira</button>
+                            <button>Adicionar para ver mais tarde</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-overlay" id="image-overlay" onclick="closeImageOverlay()">
+                    <span class="close-btn" onclick="closeImageOverlay()"><i class="bi bi-x-lg"></i>Fechar</span>
+                    <img src="" alt="FullImage" class="full-image" id="full-image" >
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="{% static 'js/menuJS/script-menu.js' %}"></script>
+    <script src="{% static 'js/mainJS/script.js' %}"></script>
+</body>
+
+</html>

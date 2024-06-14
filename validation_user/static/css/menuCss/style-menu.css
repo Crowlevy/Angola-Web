@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+#btn-exp {
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+body {
+    height: 100vh;
+    background-color: #202020;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav.side-menu {
+    width: 80px;
+    height: 100%;
+    background-color: #202020;
+    padding: 30px 0 30px;
+    box-shadow: 5px 0 0 #F28705;
+    position: fixed;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.side-menu .txt-link {
+    display: none;
+    white-space: nowrap;
+}
+
+nav.side-menu.expande {
+    width: 300px;
+}
+
+nav.side-menu.expande .txt-link {
+    display: inline-block;
+    margin-left: 20px;
+    opacity: 1;
+    transition: opacity 0.5s, margin-left 0.5s;
+}
+
+.btn-activate {
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.btn-activate > i {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: .2s;
+}
+
+ul li.activate {
+    background-color: #F28705;
+}
+
+ul li.item-menu:hover {
+    background: #d66609;
+    transition: .5s ease;
+}
+
+ul li.item-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.side-menu.expande .txt-link {
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.btn-activate span {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    nav.side-menu {
+        width: 100%;
+        bottom: 0;
+        top: auto;
+        height: auto;
+
+        z-index: 999;
+        padding: 15px 0;
+        box-shadow: none;
+        overflow-y: auto;
+    }
+
+    .btn-activate {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    ul li.item-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 10px;
+    }
+
+    ul li.item-menu a .icon > i {
+        margin-left: 0px;
+    }
+
+    ul li.item-menu a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    ul li.item-menu a .txt-link {
+        display: none;
+    }
+    
+}
+
